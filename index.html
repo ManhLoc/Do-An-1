@@ -122,46 +122,50 @@
 
         <!-- Main -->
         <main>
-            <section class="content">
-                <div class="temp_all">
-                    <img src="./assets/img/temp.svg" alt="" />
-                    <p class="temp">
-                        Nhiệt độ:
-                        <span id="nhietdo">00</span>
-                        <span>°C</span>
-                    </p>
+            <div class="container">
+                <section class="content">
+                    <div class="temp_all">
+                        <img src="./assets/img/temp.svg" alt="" />
+                        <p class="temp">
+                            Nhiệt độ:
+                            <span id="nhietdo">00</span>
+                            <span>°C</span>
+                        </p>
+                    </div>
+                    <div class="hum_all">
+                        <img src="./assets/img/hum.svg" alt="" />
+                        <p class="humidity">
+                            Độ ẩm:
+                            <span id="doam">00</span>
+                            <span>%</span>
+                        </p>
+                    </div>
+                </section>
+                <img
+                    class="fan_on_off"
+                    id="fan"
+                    src="./assets/img/fan_off.svg"
+                    alt=""
+                />
+                <div>
+                    <button class="btn" id="fan_on">
+                        <p class="fan_on">ON</p>
+                    </button>
+                    <button class="btn" id="fan_off">
+                        <p class="fan_off">OFF</p>
+                    </button>
                 </div>
-                <div class="hum_all">
-                    <img src="./assets/img/hum.svg" alt="" />
-                    <p class="humidity">
-                        Độ ẩm:
-                        <span id="doam">00</span>
-                        <span>%</span>
-                    </p>
-                </div>
-            </section>
-            <img
-                class="fan_on_off"
-                id="fan"
-                src="./assets/img/fan_off.svg"
-                alt=""
-            />
-            <div>
-                <button class="btn" id="fan_on">
-                    <p class="fan_on">ON</p>
-                </button>
-                <button class="btn" id="fan_off">
-                    <p class="fan_off">OFF</p>
-                </button>
             </div>
         </main>
 
         <!-- Footer -->
         <footer class="desc">
-            <p>GVHD: TS.Phạm Ngọc Sơn</p>
-            <p>Sinh viên thực hiện:</p>
-            <p>Nguyễn Mạnh Lộc - 20161335</p>
-            <p>Trần Nhật Hải - 20161311</p>
+            <div class="container">
+                <p>GVHD: TS.Phạm Ngọc Sơn</p>
+                <p>Sinh viên thực hiện:</p>
+                <p>Nguyễn Mạnh Lộc - 20161335</p>
+                <p>Trần Nhật Hải - 20161311</p>
+            </div>
         </footer>
 
         <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
