@@ -103,6 +103,7 @@ main {
 
 /* Footer */
 footer {
+    bottom: 0;
     margin-top: 15px;
     padding: 23px 23px;
     background: #6ca6dc;
