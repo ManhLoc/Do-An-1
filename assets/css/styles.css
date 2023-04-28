@@ -15,7 +15,7 @@ body {
 
 /* Common */
 .container {
-    max-width: calc(100% - 48px);
+    max-width: calc(100% - 100px);
     margin: 0 auto;
 }
 
@@ -67,13 +67,29 @@ main {
     justify-content: center;
 }
 
-.fan_on_off {
+.device_all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.device_fan,
+.device_led {
+    margin: auto;
+}
+
+.img_fan,
+.img_led {
+    margin-bottom: 10px;
+}
+
+.device_on_off {
     width: 250px;
     height: 250px;
 }
 
-.fan_on,
-.fan_off {
+.device_on,
+.device_off {
     font-size: 2.8rem;
 }
 
@@ -106,7 +122,7 @@ footer {
     margin-bottom: 0;
     bottom: 0;
     margin-top: 15px;
-    padding: 18px 18px;
+    padding: 14px 17px;
     background: #6ca6dc;
 }
 

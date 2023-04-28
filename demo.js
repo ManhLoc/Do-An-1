@@ -35,6 +35,26 @@ btnOff.onclick = function () {
     });
 };
 
+// ======= LED =======
+var LedOn = document.getElementById("led_on");
+var LedOff = document.getElementById("led_off");
+
+LedOn.onclick = function () {
+    //document.getElementById("fan").src = "./assets/img/fan_on.svg";
+
+    database.ref("/Do An 1").update({
+        Led: 1,
+    });
+};
+
+LedOff.onclick = function () {
+    //document.getElementById("fan").src = "./assets/img/fan_off.svg";
+
+    database.ref("/Do An 1").update({
+        Led: 0,
+    });
+};
+
 //get temp from firebase (auto update when data changes)
 database.ref("/Do An 1/Nhiet do").on("value", function (snapshot) {
     if (snapshot.exists()) {
@@ -58,6 +78,15 @@ database.ref("/Do An 1/Relay").on("value", function (snapshot) {
         if (relay == 1)
             document.getElementById("fan").src = "./assets/img/fan_on.svg";
         else document.getElementById("fan").src = "./assets/img/fan_off.svg";
+    } else console.log("No data available!");
+});
+
+database.ref("/Do An 1/Led").on("value", function (snapshot) {
+    if (snapshot.exists()) {
+        var led = snapshot.val();
+        if (led == 1)
+            document.getElementById("led").src = "./assets/img/led_on.svg";
+        else document.getElementById("led").src = "./assets/img/led_off.svg";
     } else console.log("No data available!");
 });
 
